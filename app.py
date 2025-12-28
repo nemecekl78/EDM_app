@@ -97,7 +97,7 @@ with tab1:
     with g_col1:
         st.markdown("#### ⏳ Rozpad času (Proces)")
         # Vytvoření dat pro Donut Chart
-        labels = ['Hrubování', 'Hlazení (Finiš)', 'Vedlejší časy']
+        labels = ['Hrubování', 'Dokončování (Finiš)', 'Vedlejší časy']
         values = [t_rough, t_finish, t_aux]
         colors = ['#636EFA', '#EF553B', '#00CC96'] # Moderní paleta Plotly
         
@@ -106,7 +106,7 @@ with tab1:
         fig_time.update_layout(showlegend=False, margin=dict(t=0, b=0, l=0, r=0), height=300)
         st.plotly_chart(fig_time, use_container_width=True)
         
-        st.caption(f"Hlazení zabírá {int(t_finish/total_time_min*100)}% celkového času.")
+        st.caption(f"Dokončování zabírá {int(t_finish/total_time_min*100)}% celkového času.")
 
     with g_col2:
         st.markdown("#### 📉 Efektivita úběru")
@@ -179,7 +179,7 @@ with tab3:
       <tr style="background-color: #f2f2f2; border-bottom: 2px solid #ddd;">
         <th style="padding: 10px;">Parametr</th>
         <th style="padding: 10px;">Hrubování (E1)</th>
-        <th style="padding: 10px; color: #d63031;">Hlazení (E{num_el})</th>
+        <th style="padding: 10px; color: #d63031;">Dokončování (E{num_el})</th>
       </tr>
       <tr style="border-bottom: 1px solid #ddd;">
         <td style="padding: 10px;"><b>Jiskrová mezera</b></td>
@@ -197,4 +197,5 @@ with tab3:
         <td style="padding: 10px; color: #d63031;"><b>{undersize_finish:.2f} mm</b></td>
       </tr>
     </table>
+
     """, unsafe_allow_html=True)
