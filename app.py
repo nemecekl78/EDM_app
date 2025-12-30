@@ -192,10 +192,11 @@ with tab3:
         <td style="padding: 10px;">{tech_data['orbit']} mm</td>
       </tr>
       <tr style="background-color: #e8fdf5; border-bottom: 2px solid #00cc66;">
-        <td style="padding: 10px;"><b>PODBROUŠENÍ</b></td>
+        <td style="padding: 10px;"><b>PODROZMĚR</b></td>
         <td style="padding: 10px;"><b>{(undersize_finish + 0.3):.2f} mm</b></td>
         <td style="padding: 10px; color: #d63031;"><b>{undersize_finish:.2f} mm</b></td>
       </tr>
     </table>
 
     """, unsafe_allow_html=True)
+
